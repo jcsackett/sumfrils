@@ -11,7 +11,6 @@ endif
 set t_Co=256
 let g:colors_name = "some-frills"
 
-
 " Define reusable colorvariables.
 let s:bg="#000000"
 let s:fg="#d4d4d4"
@@ -34,7 +33,7 @@ let s:warning2="#9700ce"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg
 exe 'hi Cursor guifg='s:bg' guibg='s:fg
-exe 'hi CursorLine  guibg='s:bg2
+exe 'hi CursorLine term=NONE cterm=NONE guibg='s:bg2
 exe 'hi CursorLineNr guifg='s:str' guibg='s:bg
 exe 'hi CursorColumn  guibg='s:bg2
 exe 'hi ColorColumn  guibg='s:bg2
@@ -49,13 +48,15 @@ exe 'hi Search   gui=underline'
 exe 'hi Directory guifg='s:const
 exe 'hi Folded guifg='s:fg4' guibg='s:bg
 exe 'hi WildMenu guifg='s:str' guibg='s:bg
+exe 'hi SignColumn guibg='s:bg2
+exe 'hi Visual guibg='s:bg4' term=bold cterm=bold gui=bold'
 
 exe 'hi Boolean guifg='s:const
 exe 'hi Character guifg='s:const
 exe 'hi Comment guifg='s:comment
 exe 'hi Conditional guifg='s:keyword
 exe 'hi Constant guifg='s:const
-exe 'hi Todo guibg='s:bg
+exe 'hi Todo guifg='s:fg' guibg='s:warning
 exe 'hi Define guifg='s:keyword
 exe 'hi DiffAdd guifg=#fafafa guibg=#123d0f gui=bold'
 exe 'hi DiffDelete guibg='s:bg2
@@ -68,7 +69,7 @@ exe 'hi Function guifg='s:func
 exe 'hi Identifier guifg='s:type'  gui=italic'
 exe 'hi Keyword guifg='s:keyword'  gui=bold'
 exe 'hi Label guifg='s:var
-exe 'hi NonText guifg='s:bg4' guibg='s:bg2
+exe 'hi NonText guifg='s:bg' guibg='s:bg
 exe 'hi Number guifg='s:const
 exe 'hi Operator guifg='s:keyword
 exe 'hi PreProc guifg='s:keyword
@@ -147,5 +148,3 @@ exe 'hi htmlSpecialTagName guifg='s:keyword
 
 " Markdown Highlighting
 exe 'hi mkdCode guifg='s:builtin
-
-
