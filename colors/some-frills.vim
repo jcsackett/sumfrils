@@ -1,6 +1,5 @@
 " Vim color file
 " some-frills
-" Created by j.c.sackett with ThemeCreator (https://github.com/mswift42/themecreator)
 
 hi clear
 
