@@ -1,5 +1,5 @@
 " Vim color file
-" some-frills
+" sumfrils
 
 hi clear
 
@@ -8,7 +8,7 @@ syntax reset
 endif
 
 set t_Co=256
-let g:colors_name = "some-frills"
+let g:colors_name = "sumfrils"
 
 " Define reusable colorvariables.
 let s:bg="#000000"
